@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script type="text/javascript" src="accessdataurl.js"></script>
+<script type="text/javascript">
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+// Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+// At least Safari 3+: "[object HTMLElementConstructor]"
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+// Internet Explorer 6-11
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+// Edge 20+
+var isEdge = !isIE && !!window.StyleMedia;
+// Chrome 1+
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+// Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+debugger;
+if(isFirefox || isIE || isSafari || isChrome){
+	
+	document.getElementById("img1").contentEditable = 'true';
+	document.getElementById("img2").contentEditable = 'true';
+	document.getElementById("img3").contentEditable = 'true';
+	document.getElementById("img4").contentEditable = 'true';
+	document.getElementById("img5").contentEditable = 'true';
+	document.getElementById("img6").contentEditable = 'true';
+	document.getElementById("img7").contentEditable = 'true';
+	document.getElementById("img8").contentEditable = 'true';
+	document.getElementById("img9").contentEditable = 'true';
+	document.getElementById("img10").contentEditable = 'true';
+
+	
+}
+
+
+if (!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function(obj, start) {
+         for (var i = (start || 0), j = this.length; i < j; i++) {
+             if (this[i] === obj) { return i; }
+         }
+         return -1;
+    }
+}
+
+(function($) {
+	var defaults;
+	$.event.fix = (function(originalFix) {
+	 return function(event) {
+	   event = originalFix.apply(this, arguments);
+	   if (event.type.indexOf('copy') === 0 || event.type.indexOf('paste') === 0) {
+		   debugger;
+	     event.clipboardData = event.originalEvent.clipboardData;
+	   }
+	   return event;
+	 };
+	})($.event.fix);
+	defaults = {
+	 callback: $.noop,
+	 matchType: /image.*/
+	};
+	return $.fn.pasteImageReader = function(options) {
+	 if (typeof options === "function") {
+	   options = {
+	     callback: options
+	   };
+	 }
+	 options = $.extend({}, defaults, options);
+	 return this.each(function() {
+	   var $this, element;
+	   element = this;
+	   $this = $(this);
+	   return $this.bind('paste', function(event) {
+		   debugger;
+	     var clipboardData, found;
+	     found = false;
+	     clipboardData = event.clipboardData;
+	     return Array.prototype.forEach.call(clipboardData.types, function(type, i) {
+	       var file, reader;
+	       if (found) {
+	         return;
+	       }
+	       if (type.match(options.matchType) || clipboardData.items[i].type.match(options.matchType)) {
+	         file = clipboardData.items[i].getAsFile();
+
+	         reader = new FileReader();
+	         reader.onload = function(evt) {
+	           return options.callback.call(element, {
+	             dataURL: evt.target.result,
+	             event: evt,
+	             file: file,
+	             name: file.name
+	           });
+	         };
+	         reader.readAsDataURL(file);
+	         //snapshoot();
+	         return found = true;
+	       }
+	     });
+	   });
+	 });
+	};
+	})(jQuery);
+
+//******************
+var currentID;
+var div = $(".images > div");
+div.click(function(evt){
+	debugger;
+  currentID = this.id || "No ID!";
+  console.log("div Id that is clicked on is: ", currentID);
+  if(isFirefox || isIE || isSafari || isChrome){
+  currentID = '#' + currentID;
+  var currentText = $(currentID).text();
+  if(currentText == "<< Image 1 >>" || currentText == " << Image 1 >> " ||
+	 currentText == "<< Image 2 >>" || currentText == " << Image 2 >> " || 
+	 currentText == "<< Image 3 >>" || currentText == " << Image 3 >> " || 
+	 currentText == "<< Image 4 >>" || currentText == " << Image 4 >> " ||
+	 currentText == "<< Image 5 >>" || currentText == " << Image 5 >> " || 
+	 currentText == "<< Image 6 >>" || currentText == " << Image 6 >> " || 
+	 currentText == "<< Image 7 >>" || currentText == " << Image 7 >> " || 
+	 currentText == "<< Image 8 >>" || currentText == " << Image 8 >> " ||
+	 currentText == "<< Image 9 >>" || currentText == " << Image 9 >> " || 
+	 currentText == "<< Image 10 >>" || currentText == " << Image 10 >> "){
+  $(currentID).empty();
+  																			}
+  }
+})
+//
+
+	$("html").pasteImageReader(function(results) {
+	var dataURL, filename;
+	//debugger;
+	filename = results.filename, dataURL = results.dataURL;
+    //*********custom code**********//
+    $(document).ready(function(){
+  	  debugger;
+    var inputvalue = dataURL;
+    if (currentID == "img1"){
+    $('#fileval1').text(inputvalue);
+    }else if(currentID == "img2"){
+    $('#fileval2').text(inputvalue);	
+    }else if(currentID == "img3"){
+    $('#fileval3').text(inputvalue);	
+    }else if(currentID == "img4"){
+    $('#fileval4').text(inputvalue);	
+    }else if(currentID == "img5"){
+    $('#fileval5').text(inputvalue);	
+    }else if(currentID == "img6"){
+    $('#fileval6').text(inputvalue);	
+    }else if(currentID == "img7"){
+    $('#fileval7').text(inputvalue);	
+    }else if(currentID == "img8"){
+    $('#fileval8').text(inputvalue);	
+    }else if(currentID == "img9"){
+    $('#fileval9').text(inputvalue);	
+    }else if(currentID == "img10"){
+    $('#fileval10').text(inputvalue);	
+    }
+  	//$('#imageData').data('ImagesData', { currentID : inputvalue });  
+  	//var myData = $('#imageData').data('ImagesData');
+  //	console.log("Content of myData is:",myData);
+   // document.cookie = "dataurlvalue=" + dataURL;
+ 		});	         
+   //*******ends******//
+	$data.text(dataURL);
+	$size.val(results.file.size);
+	$type.val(results.file.type);
+	$test.attr('href', dataURL);
+	var img = document.createElement('img');
+	img.src= dataURL;
+	var w = img.width;
+	var h = img.height;
+	$width.val(w)
+	$height.val(h);
+	return $(".active").css({
+	 backgroundImage: "url(" + dataURL + ")"
+	}).data({'width':w, 'height':h});
+	});
+
+	var $data, $size, $type, $test, $width, $height;
+	$(function() {
+	$data = $('.data');
+	$size = $('.size');
+	$type = $('.type');
+	$test = $('#test');
+	$width = $('#width');
+	$height = $('#height');
+	$('.target').on('click', function() {
+		debugger;
+	 var $this = $(this);
+	 var bi = $this.css('background-image');
+	 if (bi!='none') {
+	     $data.text(bi.substr(4,bi.length-6));
+	 }
+	                 
+	                 
+	 $('.active').removeClass('active');
+	 $this.addClass('active');
+	 
+	 $this.toggleClass('contain');
+	 
+	 $width.val($this.data('width'));
+	 $height.val($this.data('height'));
+	 if ($this.hasClass('contain')) {
+	   $this.css({'width':$this.data('width'), 'height':$this.data('height'), 'z-index':'10'})
+	 } else {
+	   $this.css({'width':'', 'height':'', 'z-index':''})
+	 } 
+	 
+	})
+	
+	/* $('.target2').on('click', function() {
+		debugger;
+	 var $this = $(this);
+	 var bi = $this.css('background-image');
+	 if (bi!='none') {
+	     $data.text(bi.substr(4,bi.length-6));
+	 }
+	                 
+	                 
+	 $('.active').removeClass('active');
+	 $this.addClass('active');
+	 
+	 $this.toggleClass('contain');
+	 
+	 $width.val($this.data('width'));
+	 $height.val($this.data('height'));
+	 if ($this.hasClass('contain')) {
+	   $this.css({'width':$this.data('width'), 'height':$this.data('height'), 'z-index':'10'})
+	 } else {
+	   $this.css({'width':'', 'height':'', 'z-index':''})
+	 } 
+	 
+	}) */
+	
+	})
+</script>
+</head>
+<body>
+<p><font size="4">Paste Images Below</font></p>
+<div class ="images">
+<div class="target" id='img1'> &lt;&lt; Image 1 >> </div>
+<div class="target" id='img2'> &lt;&lt; Image 2 >> </div>
+<div class="target" id='img3'> &lt;&lt; Image 3 >> </div>
+<div class="target" id='img4'> &lt;&lt; Image 4 >> </div>
+<div class="target" id='img5'> &lt;&lt; Image 5 >> </div>
+<div class="target" id='img6'> &lt;&lt; Image 6 >> </div>
+<div class="target" id='img7'> &lt;&lt; Image 7 >> </div>
+<div class="target" id='img8'> &lt;&lt; Image 8 >> </div>
+<div class="target" id='img9'> &lt;&lt; Image 9 >> </div>
+<div class="target" id='img10'> &lt;&lt; Image 10 >> </div> 
+</div>
+
+<div id="fileval1" style="display: none;"></div>
+<div id="fileval2" style="display: none;"></div>
+<div id="fileval3" style="display: none;"></div>
+<div id="fileval4" style="display: none;"></div>
+<div id="fileval5" style="display: none;"></div>
+<div id="fileval6" style="display: none;"></div>
+<div id="fileval7" style="display: none;"></div>
+<div id="fileval8" style="display: none;"></div>
+<div id="fileval9" style="display: none;"></div>
+<div id="fileval10" style="display: none;"></div>
+
+</body>
+</html>

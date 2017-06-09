@@ -1,0 +1,56 @@
+{
+	"fields": [
+
+		{
+			"fieldName": "Promo Status"
+		}, {
+			"fieldName": "Promo ID"
+		}, {
+			"fieldName": "Item ID"
+		}, {
+			"fieldName": "Customer"
+		}, {
+			"fieldName": "Customer Name"
+		}, {
+			"fieldName": "Sales Rep"
+		}, {
+			"fieldName": "Promo From Date"
+		}, {
+			"fieldName": "Promo To Date"
+		}, {
+			"fieldName": "Product"
+		}, {
+			"fieldName": "Customer Part ID"
+		}, {
+			"fieldName": "MIR"
+		}, {
+			"fieldName": "IR"
+		}
+	],
+
+
+	"searchParameters": [
+
+		{
+			"searchParameter": "contains"
+		}, {
+			"searchParameter": "equals"
+		}, {
+			"searchParameter": "does not equals"
+		}, {
+			"searchParameter": "is less than"
+		}, {
+			"searchParameter": "is less than or equals to"
+		}, {
+			"searchParameter": "is greater than"
+		}, {
+			"searchParameter": "is greater than or equals to"
+		}, {
+			"searchParameter": "between"
+		}, {
+			"searchParameter": "starts with"
+		}, {
+			"searchParameter": "ends with"
+		}
+	]
+}

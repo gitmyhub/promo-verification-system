@@ -1,0 +1,353 @@
+@CHARSET "ISO-8859-1";
+
+/*//login new
+#Login,#Cancel{
+      color:white!important;
+      font-family: "Century Gothic" !important;       
+      font-weight : bold;
+      height:30px;
+      width:90px;
+       background-color: #007fff  !important;   
+      text-align:center;
+      -moz-border-radius: 10px 20px / 20px 10px;
+      border-radius: 25px 20px / 20px 25px;
+      border: thin 1 px black;
+} 
+#Login-inner:hover{
+background-color: #e60000 !important;    
+
+} */
+#Cancellogin-inner:hover,#InternApply-inner:hover,#InternReset-inner:hover,#InternExport-inner:hover,#SalesrepApply-inner:hover,
+#SalesrepReset-inner:hover,#SalesrepExport-inner:hover,#Accounts-Apply-inner:hover,#Accounts-Reset-inner:hover,#Accounts-Export-inner:hover,
+#ManagerApply-inner:hover,#ManagerReset-inner:hover,#ManagerExport-inner:hover,#idReAssignSubmit-inner:hover,#idReAssignClear-inner:hover,
+
+{
+background-color: #e60000 !important;    
+
+}
+/* #cp{
+	color:white!important;
+} */
+ #chng_pass,#fname,#mfname,#logout,#mlogout,#apptitle{
+	 color:white!important; 
+	font-weight : bold;
+	
+}
+#srep_od1,#srep_dt1
+{
+ color:white!important;    
+/*font-weight : bold; */
+}
+
+#oOverdue,#oDue,#oUp,#saccl1,#saccl2,#saccl3,#saccl4,#Intern_up,#Intern_dt,#Intern_name,#Intern_od,
+#srep_name,#srep_od,#srep_dt,#srep_up,#customer,#customer_od,#customer_dt,#customer_up,#mal1,#mal2,#mal3,#mal4,
+#mal5,#mal6,#mal7,#mal8,#mal9,#mal10,#mal11,#mal12,#mal13,#mal14,#mal15,#mal16,#malink,#saccl5,#srep_hname
+{
+ color:white!important; 
+/*font-weight : bold; */
+}
+
+
+#input1, #input2,#input3, #input4,#oemid{
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.tableClass tr:hover td {
+	background-color: #ffff80 !important;
+	} 
+	
+ #logout1,#chng_pass1,#fname1, #fnames, #logouts{
+	 color:white!important; 
+	font-weight : bold;
+}
+
+/* #b1:hover,#b2:hover,#b3:hover,#b4:hover,#b5:hover,#b6:hover,#b7:hover{
+	background-color: red !important;
+} */
+/* #home,#searchpromo,#searchacc,#password,#checkpromo,#internres,#srres,#reassign
+{
+
+color:black;	
+} */
+/* TableColumn headings style green*/
+#login_page
+{
+	background-color : white;
+}
+#oth1,#oth2,#oth3,#oth4,#oth5,#oth6,#oth7,#oth8,#oth9,#oth10,#oth11,#Edit,#oth15,#oth20,#oth21,#oth22,#oth23,#srl1,#srl2,#srl3,#srl4,#srl5,#srl6,#srl7,
+#srl8,#srl9,#srl10,#srl11,#srl12,#srl13,#srl14,#srl15,#srl16,#srl20,#srl21,#srl22,#slabel1,#slabel2,#slabel3,#SReplink,#adminLink,#mahl1,#mahl2,
+#mahl3,#mahl4,#mahl5,#mahl6,#mahl7,#mahl8,#mahl9,#mahl10,#mal20, #mah21, #mah22, #mal21, #mal22
+{
+/*	font-weight: bold; */
+	color:white; 
+}
+
+.sapUiSizeCompact .sapUiTableCol, .sapUiSizeCompact .sapUiTableColRowHdr, .sapUiSizeCompact .sapUiTableColHdrCnt {
+    /*background-color: #16D2C9 !important; */
+/* background: #525252; /* fallback for old browsers */
+/*background: linear-gradient(to left, #83a4d4 , #b6fbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+/*background: linear-gradient(to left, #FBD3E9 , #BB377D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+/*background: linear-gradient(to left, #606c88 , #3f4c6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /*background: linear-gradient(to left, #00d2ff , #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /*   background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to left, #e6f5ff , #80ccff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /* background-color: #e6f5ff !important;  */
+ /*	background-color: #0098D4 !important; */
+ /* background: linear-gradient(#0098D4 , #0A7287); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 	background-color: #009DE0  !important;
+    color: #000000;
+}
+#th1,#th2,#th3,#th4,#th5,#th6,#th7,#th8,#th9
+{
+/*font-weight: bold; */	
+}
+ #tit{
+ font-size: 30px;
+    line-height: 40px;
+	
+} 
+
+ #home:hover,#searchpromo:hover,#searchacc:hover,#password:hover,#checkpromo:hover,#internres:hover,#srres:hover,#reassign:hover,
+#mhome:hover,#mcheckpromo:hover,#msearchpromo:hover,#msearchacc:hover,#minternres:hover,#msrres:hover,#mreassign:hover,
+#details:back,#details:previous,#details:previous
+{
+
+background-color: #6DD1F2 !important;
+font-weight: bold;	
+}
+ 
+
+
+/* Promo Details */
+
+.tfield{
+	background-color: 	#f2f2f2 !important;	
+	text-align: center;
+
+}
+
+.head{
+	font-weight : bold;
+	color : black;	
+	
+}
+
+.button{
+	color:white!important;
+	font-family: "Century Gothic" !important;	
+	font-weight : bold;
+	height:30px;	
+	background-color: #1aa3ff  !important;	
+	text-align:center;
+	-moz-border-radius: 10px 20px / 20px 10px;
+	border-radius: 25px 20px / 20px 25px;
+	border: thin 1 px black;
+}
+
+.chead{
+	color: white !important;
+	background-color: blue;
+	font-family : monospace;
+	font-weight: bold;
+	
+}
+
+
+#email,#password1{
+      font-family: monospace;
+      font-weight: bold;
+      
+}
+
+#oEmaillabel,#Passwordlabel{
+      font-family: "Century Gothic" !important; 
+      font-weight: bold;
+      font-size: medium;
+
+      color : #1aa3ff;
+      text-align:right;
+}
+/*reassign promo*/
+.tableClass tr:nth-child(odd) {
+    background-color: white;  
+    
+}
+.tableClass tr:nth-child(even) {
+    background-color: #e6f0ff;
+}
+/*.tableClass th {
+    background-color: #66a3ff; 
+	border-style:outset;
+	border-width:1px 1px 1px 1px;
+} */
+.tableClass td{
+	border-style:outset;
+	border-width:1px 1px 1px 1px;
+}
+.tableClass {
+	border-style:outset;
+	border-width:2px 2px 2px 2px;
+}
+.target {
+  border: solid 1px #aaa; 
+  height: 48%; 
+  width: 48%;
+  /* margin-top: 1em; */
+  border-radius: 5px; 
+  background-color: white; 
+ /*  background-size: cover; */
+  /* display: inline;  */
+  display: inline-block; 
+  cursor: pointer;
+  /* transition: 300ms all; */
+  position: relative;
+  background-repeat: no-repeat;
+  margin-top: 1%; 
+  margin-right: 1%; 
+  overflow: hidden;
+    
+}
+
+/* #img2 {
+	overflow: hidden;
+} */
+
+/*.target2 {
+  border: solid 1px #aaa; 
+  height: 48%; 
+  width: 48%;
+  /* margin-top: 1em; */
+ border-radius: 5px; 
+  background-color: white; 
+ /*  background-size: cover; */
+  /* display: inline;  */
+  display: inline-block; 
+  cursor: pointer;
+  /* transition: 300ms all; */
+  position: absolute;
+  background-repeat: no-repeat;
+  margin-top: 1%; 
+   margin-left: 1%; 
+  
+} */
+
+.contain {
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+   top: 0px; 
+  left: 0px;   
+  
+} 
+.active {
+   box-shadow: 0px 0px 10px 10px rgba(0,0,255,.4); 
+}
+.images {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	/* background-color: yellow; */
+}
+
+.sapUiRespGridSpanL5{
+	padding-left: 0.10rem !important;
+	padding-right: 0.10rem !important;
+}
+
+/*.sapMLabel{
+	display: inline !important;
+} */
+
+/* ------------------------------Code added by Anand----------------------------- */
+h5#F1C1--title.sapUiFormTitle.sapUiFormTitleH5 {
+	text-align: center;
+	color: #FB6542;
+	font-family: Berlin sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-shadow: none;
+	/* padding-top: 3%;  */
+}
+
+.sapUiAppHdr .sapUiTv {
+	line-height: inherit;
+}
+
+#appHeader1 {
+	background-image: none;
+	background-color: #00529D;
+	color: #8D230F; /* background-color: #67BCDB; color: #E44424; */
+	text-shadow: none;
+}
+
+#appHeader1-logoText {
+	/*padding-left: 380px;
+	FONT-SIZE: 30PX;
+	font-family: Century Gothic;
+	border: none; */
+	color: white;
+}
+
+#__app0-BG {
+	/* background-image: url("Images/BGlaptop.jpg"); */
+	background-color: #f5f5f5;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#F1C1--Grid {
+	 padding-top: 1%; 
+}
+
+#Cancellogin-inner:hover, #Login-inner:hover {
+	background-color: #FDD475;
+	color: black;
+}
+div#F1C1---Panel {
+    background-color: #f5f5f5;
+}
+
+#F1 {
+	padding-top: 10%;
+}
+
+.reassign{
+       padding-top: 5px !important;
+}
+
+#srl100,
+{
+       font-weight: bold;
+       color:white; 
+} 
+
+.custLabel{
+padding-top: 8px !important;
+text-align: right !important;
+width: 140px !important;
+} 
+
+
+.custlableft{
+	
+width: 170px !important;	
+}
+
+.custlabsrep{
+padding-top: 8px !important;
+text-align: right !important;	
+width: 200px !important;	
+}
+
+.sapMTextArea>.sapMInputBaseReadonlyInner.sapMTextAreaInner {
+    border: 0px !important;
+}
+
+#srl100,#mal31
+{
+      /* font-weight: bold; */
+       color:white; 
+}
+
